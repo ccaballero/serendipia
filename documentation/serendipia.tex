@@ -1,0 +1,156 @@
+\documentclass[letter,12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{pifont}
+\usepackage[
+pdfauthor={Carlos Caballero Burgoa},%
+pdftitle={Proyecto Serendipia},%
+colorlinks,%
+citecolor=black,%
+filecolor=black,%
+linkcolor=black,%
+%urlcolor=black
+pdftex]{hyperref}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+
+% Para la primera página
+\fancypagestyle{plain}{
+\fancyhead[l]{}
+\fancyhead[r]{}
+\fancyhead[c]{}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyfoot[l]{SCESI \\ Sociedad Científica de Estudiantes de Sistemas e Informática}
+\fancyfoot[c]{}
+\fancyfoot[r]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.5pt}}
+
+% Para el resto de páginas
+\lhead{Proyecto Serendipia}
+\chead{}
+\rhead{\includegraphics[width=0.1\textwidth]{scesi.png}}
+\renewcommand{\headrulewidth}{0.4pt}
+\lfoot{SCESI \\ Sociedad Científica de Estudiantes de Sistemas e Informática \\ 
+\url {http://scesi.fcyt.umss.edu.bo}}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{\bf Serendipia}
+\author{Carlos Caballero Burgoa} 
+
+\begin{document}
+\maketitle
+\begin{center}\includegraphics[width=0.48\textwidth]{serendipia.png}\end{center}
+\begin{center}\url {http://scesi.fcyt.umss.edu.bo}\end{center}
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section{Introducción}
+Este documento se plantea como la propuesta para la puesta en marcha de un sitio web, cuya meta
+es la difusión, intercambio y colaboración en proyectos de desarrollo de software en las carreras
+de informática y sistemas.
+
+Se mencionan los beneficios que conlleva escribir software que para el programador es interesante,
+útil, y beneficioso; partiendo de este punto lograr ademas un beneficio para su comunidad.
+
+Por ultimo de definen los pasos a seguir para este cometido.
+
+\section{Antecedentes}
+Es bien sabido que las herramientas que han fomentado el surgimiento de la era digital, nacieron
+en gran parte como proyectos de investigación en universidades alrededor del mundo, tales
+iniciativas reflejan como las ideas, esfuerzos y participación, han conseguido forjar nuestra
+realidad tal y como la conocemos hoy en día.
+
+Si bien en la Universidad Mayor de San Simón, posee una gran variedad de proyectos de investigación
+en diferentes áreas de la ciencia; los aportes realizados hacia el desarrollo de software no
+parecen tener grandes repercusiones sobre la sociedad en general o sobre algún sector de la
+comunidad estudiantil en particular.
+
+\section{Definición del Problema}
+Se ha visto que los estudiantes tanto de la carrera de informática, como de la carrera de
+ingeniería de sistemas, poseen grandes cantidades de software, producto de su propio desarrollo, ya
+sea para las materias que ha cursado, o también las creados solo por pasatiempo personal; todos
+esos productos subyacentes de la actividad académica, en su gran mayoría se ven desaprovechadas una
+vez que el estudiante termina sus estudios superiores.
+
+Hasta ahora el procedimiento común para la difusión de este software, se basa en el intercambio
+directo del creador a los interesados del software que han oído acerca de este, dificultando mucho
+la valoración sobre las programas existentes.
+
+Todo esto tiende a la creación repetida de muchos programas simples, creados por muchas personas;
+pero que nunca llegan a integrarse en herramientas mas complejas; perdiendo también la experiencia
+necesaria de trabajo en equipo, carencia notoriamente apreciada entre los estudiantes.
+
+Por lo mencionado anteriormente se define el problema como:
+
+Las dificultades para el intercambio y la colaboración en el desarrollo de software conlleva a la
+escasa creación de herramientas propias y útiles para la comunidad.
+
+\section{Objetivo General}
+Crear un canal de comunicación accesible para el intercambio de software tal que esta facilite la
+creación de herramientas de mayor complejidad y funcionalidad.
+
+\section{Objetivos Específicos}
+\begin{itemize}
+\item Facilitar el acceso a los programas creados dentro las carreras de informática e ingeniería
+de sistemas.
+\item Incrementar el uso de tales herramientas basado en la centralización de medio en el que se
+pone a disposición.
+\item Fomentar la creación de proyectos de desarrollo de software a gran escala.
+\end{itemize}
+
+\section{Herramientas}
+Para tal cometido se considera la puesta en marcha de un sistema de control de versiones sobre un
+servidor, y la definición de su conjunto de políticas de uso.
+
+A continuación se pone de manifiesto el conjunto de pasos a realizar:
+
+\begin{enumerate}
+\item Montaje del servidor para control de versiones git.
+\item Instalación y configuración de la aplicación gitolite, para el manejo de cuentas, grupos, y
+repositorios.
+\item Montaje de la aplicación web 'viewgit' para el acceso al software vía web.
+\item Definición del conjunto de políticas de uso del sitio, de forma tal que fomente el
+intercambio de software entre toda la comunidad.
+\end{enumerate}
+
+Referente al conjunto de políticas de uso, se considera imperativo restringir el uso del sitio a
+herramientas que posean algún tipo de licencia permisiva de software\cite{Senabre}.
+
+A continuación mencionamos los tipos de licencias de software que serian validas.
+
+\begin{itemize}
+\item Affero GPL.
+\item Modified BSD license.
+\item GNU General Public License.
+\item GNU Lesser General Public License.
+\end{itemize}
+
+\section{Justificación}
+Este proyecto intenta ahorrar el tiempo que las personas utilizan en de\-sa\-rro\-llar programas
+propios, cuando pueden existir otras herramientas equivalentes ya creadas.
+
+El otro objetivo a largo plazo es la creación de proyectos de software de mayor repercusión y que
+gocen de la contribución de una gama amplia de personase en el ámbito local.
+
+\begin{thebibliography}{99}
+\bibitem{Senabre} Senabre Hidalgo, Enric, 2005.\\
+"La colaboración en el desarrollo del software libre".\\
+Disponible en el ARCHIVO del Observatorio para la CiberSociedad en
+http://www.cibersociedad.net/archivo/articulo.php?art=202
+\end{thebibliography}
+
+\end{document}          

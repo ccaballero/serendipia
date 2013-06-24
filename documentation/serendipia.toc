@@ -1,0 +1,8 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}
+\contentsline {section}{\numberline {2}Antecedentes}{3}{section.2}
+\contentsline {section}{\numberline {3}Definici\IeC {\'o}n del Problema}{3}{section.3}
+\contentsline {section}{\numberline {4}Objetivo General}{4}{section.4}
+\contentsline {section}{\numberline {5}Objetivos Espec\IeC {\'\i }ficos}{4}{section.5}
+\contentsline {section}{\numberline {6}Herramientas}{4}{section.6}
+\contentsline {section}{\numberline {7}Justificaci\IeC {\'o}n}{5}{section.7}
